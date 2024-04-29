@@ -11,6 +11,25 @@ export default function BitExchange() {
   const [amount1, setAmount1] = useState<number>(0);
   const [amount2, setAmount2] = useState<number>(0);
 
+  const handleAmount1Change = (e: any) => {
+    const value = +e.target.value;
+    setAmount1(value);
+    setAmount2(+((value * theChange.rate).toFixed(2)));
+  }
+
+  const handleAmount2Change = (e: any) => {
+    const value = +e.target.value;
+    setAmount2(value);
+    setAmount1(+((value / theChange.rate).toFixed(2)));
+  }
+
+  const handleCurrencyChange = (e: any) => {
+    const value = e.target.value;
+    const selected = changeList.find((item) => item.value === value) || changeList[0];
+    setTheChange(selected);
+    setAmount2(+(amount1 * selected.rate).toFixed(2));
+  }
+
   return (
     <div className="w-full px-5 mb-4">
       <div className="w-full px-4 py-6 bg-brown rounded-2xl">
@@ -21,11 +40,7 @@ export default function BitExchange() {
               <input
                 className="input-number w-full"
                 value={amount1}
-                onChange={(e) => {
-                  const value = +e.target.value;
-                  setAmount1(value);
-                  setAmount2(+((value * theChange.rate).toFixed(2)));
-                }}
+                onChange={handleAmount1Change}
               />
               <label htmlFor="flag" className="absolute inset-y-0 right-0 flex items-center pr-3">
                 <span>{theChange ? theChange.icon : changeList[0].icon}</span>
@@ -33,12 +48,7 @@ export default function BitExchange() {
                   className="select-contry ml-2"
                   name=""
                   id="flag"
-                  onChange={(e) => {
-                    const value = e.target.value;
-                    const selected = changeList.find((item) => item.value === value) || changeList[0];
-                    setTheChange(selected);
-                    setAmount2(+(amount1 * selected.rate).toFixed(2));
-                  }}
+                  onChange={handleCurrencyChange}
                 >
                   {changeList.map((item) => {
                     return (
@@ -62,11 +72,7 @@ export default function BitExchange() {
               <input
                 className="input-number w-full"
                 value={amount2}
-                onChange={(e) => {
-                  const value = +e.target.value;
-                  setAmount2(value);
-                  setAmount1(+(value / theChange.rate).toFixed(2));
-                }}
+                onChange={handleAmount2Change}
               />
               <label htmlFor="flag" className="absolute inset-y-0 right-0 flex items-center pr-3">
                 <span>
