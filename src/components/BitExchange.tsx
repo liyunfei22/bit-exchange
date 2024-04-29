@@ -46,7 +46,6 @@ export default function BitExchange() {
                     </option>
                   );
                 })}
-                <option value="GBP2">GBP2</option>
               </select>
             </label>
           </div>
@@ -62,25 +61,25 @@ export default function BitExchange() {
               <span className="absolute top-3.5">
                 <IDRIcon />
               </span>
-              <select value="IDR" className="select-contry" disabled>
+              <select className="select-contry">
                 <option value="IDR">
-                  <IDRIcon />
-                  IDR
+                 IDR
                 </option>
               </select>
             </label>
           </div>
         </div>
         <div>
-          <div>
-            <IDRIcon />
+          <div className="text-xl text-center pt-4">
             <span>1.000 GBP</span>
-            <span>=</span>
-            <span>19.990</span> <span>IDR</span>
+            <span className="px-1">=</span>
+            <span className="text-green-text">19.990</span> <span>IDR</span>
           </div>
-          <div>Mid-market exchange rate at 10:38</div>
+          <div className="text-center font-light">Mid-market exchange rate at 10:38</div>
         </div>
-        <div></div>
+        <div className="flex justify-center pt-5">
+          <button className="rounded-full bg-yellow text-black-100 text-blob text-base py-2 w-48">Browse All Currencies</button>
+        </div>
       </div>
     </div>
   );

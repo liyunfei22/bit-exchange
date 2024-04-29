@@ -1,14 +1,14 @@
 export default function IDRIcon() {
   return (
     <svg
-      width="21"
-      height="21"
-      viewBox="0 0 21 21"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <circle cx="11" cy="11" r="11" fill="url(#pattern0_119_216)" />
+      <circle cx="10" cy="10" r="10" fill="url(#pattern0_119_216)" />
       <defs>
         <pattern
           id="pattern0_119_216"

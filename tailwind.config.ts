@@ -15,7 +15,8 @@ const config: Config = {
         },
         brown: '#F0EAE0',
         green: '#D1E2BE',
-        yellow: '#FAFF7B'
+        yellow: '#FAFF7B',
+        'green-text': '#0C9400'
       },
       spacing: {
         18: '4.5rem',
