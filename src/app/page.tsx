@@ -1,3 +1,6 @@
+import BitExchange from "@/components/BitExchange";
+import Carousel from "@/components/Carousel";
+import ConcatUs from "@/components/ConcatUs";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Image from "next/image";
 
@@ -7,6 +10,7 @@ const plus_Jakarta_Sans = Plus_Jakarta_Sans({
 });
 
 export default function Home() {
+
   const list = [
     {
       img: "/Coins.png",
@@ -41,9 +45,7 @@ export default function Home() {
       <div className="font-bold text-xl text-center px-12 mb-4">
         Maximize Money Exchange, Best Rate in Bali!
       </div>
-      <div className="w-full px-5 mb-4">
-        <div className="w-full px-4 py-24 bg-brown rounded-2xl"></div>
-      </div>
+      <BitExchange/>
       <div className="px-5 py-6">
         <div className="font-bold text-xl pb-2 text-center">
           Why BitExchange
@@ -80,24 +82,26 @@ export default function Home() {
         );
       })}
       <div className="px-5 py-6">
-        <div className="font-bold text-xl py-6 pb-2 text-center">
+        <div className="font-bold text-xl pb-2 text-center">
           Convertion Rate
         </div>
         <div
-          className={`${plus_Jakarta_Sans.className} text-sm indent-4 font-normal text-center pb-4`}
+          className={`${plus_Jakarta_Sans.className} text-sm indent-4 font-normal text-center mb-4`}
         >
           Unlike most banks, BitExchange uses the real exchange rate to exchange
           your money — just like the one used by Google.
         </div>
         <Image
-          className="mb-2"
           src="/change.png"
           width={335}
           height={241}
           alt={""}
         />
       </div>
-      <div></div>
+      <Carousel/>
+      <div>
+        <ConcatUs/>
+      </div>
       <div></div>
     </main>
   );

@@ -14,6 +14,7 @@ const config: Config = {
           DEFAULT: '#000000'
         },
         brown: '#F0EAE0',
+        green: '#D1E2BE',
         yellow: '#FAFF7B'
       },
       spacing: {
@@ -21,6 +22,8 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    //require('@tailwindcss/forms')
+  ],
 };
 export default config;
