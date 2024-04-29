@@ -23,7 +23,7 @@ const config: Config = {
     },
   },
   plugins: [
-    //require('@tailwindcss/forms')
+    // require('@tailwindcss/forms')
   ],
 };
 export default config;
