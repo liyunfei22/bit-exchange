@@ -10,6 +10,7 @@ import Instagram from "@/components/icons/Instagram";
 import Linkedin from "@/components/icons/Linkedin";
 import Youtobe from "@/components/icons/Youtobe";
 import Link from 'next/link'
+import Header from "@/components/Header";
 
 const inter = Lato({
   subsets: ["latin"],
@@ -26,23 +27,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="w-full h-18 border-b lg:h-[120px] border-black	 flex justify-between items-center px-4">
-          <div className="lg:hidden"><LogInIcon/></div>
-          <div className="hidden lg:block lg:ml-20"><LogInIconLarge/></div>
-          <div>
-            <div className="lg:hidden"><MenuIcon/></div>
-            <div className="hidden lg:flex text-2xl color-black ">
-              <Link className="mr-8" href="/">Home</Link>
-              <Link className="mr-8" href="/about">About Us</Link>
-              <div className="mr-8">Contact Us</div>
-            </div>
-          </div>
-        </nav>
+        <Header/>
         <main>{children}</main>
-        <footer className="flex flex-col items-center py-6">
+        <footer className="flex flex-col items-center py-6 lg:py-[60px]">
           <div className="pb-5">
             <LogInIcon2/>
           </div>
