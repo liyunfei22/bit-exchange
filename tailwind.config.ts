@@ -12,7 +12,9 @@ const config: Config = {
         black: {
           100: '#3C432F',
           DEFAULT: '#000000'
-        }
+        },
+        brown: '#F0EAE0',
+        yellow: '#FAFF7B'
       },
       spacing: {
         18: '4.5rem',
