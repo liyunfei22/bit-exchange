@@ -47,7 +47,7 @@ export default function About() {
           >
             Our dedicated team of professionals is passionate about delivering
             superior customer service and creating value for our clients.
-            Whether you're a seasoned traveler seeking competitive exchange
+            Whether you are a seasoned traveler seeking competitive exchange
             rates or an investor looking to diversify your portfolio, you can
             count on BitExchange for reliable, efficient, and secure financial
             solutions.
@@ -59,7 +59,7 @@ export default function About() {
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15774.008233309467!2d115.1720793!3d-8.7387406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2456cc382b135%3A0x20473c679f3048a4!2sBitExchange%20Money%20Changer%20(PT.%20Mongol%20Balindo%20Valas)!5e0!3m2!1sen!2s!4v1714286231984!5m2!1sen!2s"
           className="border-0 w-full h-full"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <div className="lg:hidden">

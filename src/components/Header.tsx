@@ -19,7 +19,7 @@ export default function Header() {
   }, [router]); // 当路由路径变化时重新运行效果
 
   // 点击页面空白处关闭菜单
-  const handleClickOutside = (event) => {
+  const handleClickOutside = (event: any) => {
     if (isMenuOpen && !event.target.closest(".header")) {
       setIsMenuOpen(false);
     }
@@ -32,7 +32,7 @@ export default function Header() {
       // 组件卸载时移除事件监听
       document.removeEventListener("click", handleClickOutside, true);
     };
-  }, [isMenuOpen]); // 当 isMenuOpen 变化时重新运行效果
+  }, [isMenuOpen, handleClickOutside]); // 当 isMenuOpen 变化时重新运行效果
 
   return (
     <nav className="w-full h-18 border-b lg:h-[120px] border-black	 flex justify-between items-center px-4">

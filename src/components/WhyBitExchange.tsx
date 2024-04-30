@@ -44,7 +44,7 @@ export default function WhyBitExchange() {
           className={`${plus_Jakarta_Sans.className} text-sm indent-4 font-normal text-center lg:text-xl`}
         >
           Welcome to BitExchange – your premier destination for hassle-free
-          currency exchange. Wondering why you should choose us? Here's why:
+          currency exchange. Wondering why you should choose us? Here is why:
         </div>
       </div>
       <div className="lg:flex lg:w-[1208px] lg:m-auto lg:py-10">
