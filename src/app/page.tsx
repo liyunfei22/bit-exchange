@@ -10,7 +10,6 @@ const plus_Jakarta_Sans = Plus_Jakarta_Sans({
 });
 
 export default function Home() {
-
   const list = [
     {
       img: "/Coins.png",
@@ -45,62 +44,59 @@ export default function Home() {
       <div className="font-bold text-xl text-center px-12 mb-4">
         Maximize Money Exchange, Best Rate in Bali!
       </div>
-      <BitExchange/>
-      <div className="px-5 py-6">
-        <div className="font-bold text-xl pb-2 text-center">
+      <BitExchange />
+      <div className="px-5 py-6 lg:w-[859px] lg:m-auto">
+        <div className="font-bold text-xl pb-2 text-center lg:text-5xl lg:pb-6">
           Why BitExchange
         </div>
         <div
-          className={`${plus_Jakarta_Sans.className} text-sm indent-4 font-normal text-center`}
+          className={`${plus_Jakarta_Sans.className} text-sm indent-4 font-normal text-center lg:text-xl`}
         >
           Welcome to BitExchange – your premier destination for hassle-free
           currency exchange. Wondering why you should choose us? Here's why:
         </div>
       </div>
-      {list.map((item) => {
-        return (
-          <div
-            key={item.img}
-            className="flex flex-col justify-center items-center mb-1 px-5 pt-4"
-          >
-            <div>
-              <Image
-                className="mb-2"
-                src={item.img}
-                width={item.width}
-                height={item.height}
-                alt={item.alt}
-              />
-            </div>
-            <div className="font-semibold text-base">{item.title}</div>
+      <div className="lg:flex lg:w-[1208px] lg:m-auto lg:py-10">
+        {list.map((item) => {
+          return (
             <div
-              className={`${plus_Jakarta_Sans.className} text-base indent-4 font-normal text-center`}
+              key={item.img}
+              className="flex flex-col justify-center items-center mb-1 px-5 pt-4"
             >
-              {item.describe}
+              <div>
+                <Image
+                  className="mb-2"
+                  src={item.img}
+                  width={item.width}
+                  height={item.height}
+                  alt={item.alt}
+                />
+              </div>
+              <div className="font-semibold text-base">{item.title}</div>
+              <div
+                className={`${plus_Jakarta_Sans.className} text-base indent-4 font-normal text-center`}
+              >
+                {item.describe}
+              </div>
             </div>
-          </div>
-        );
-      })}
-      <div className="px-5 py-6">
-        <div className="font-bold text-xl pb-2 text-center">
+          );
+        })}
+      </div>
+      <div className="px-5 py-6 lg:bg-brown lg:py-28">
+        <div className="font-bold text-xl pb-2 text-center lg:text-6xl lg:pb-6">
           Convertion Rate
         </div>
         <div
-          className={`${plus_Jakarta_Sans.className} text-sm indent-4 font-normal text-center mb-4`}
+          className={`${plus_Jakarta_Sans.className} text-sm indent-4 font-normal text-center mb-4 lg:text-xl lg:w-[859px] lg:m-auto`}
         >
           Unlike most banks, BitExchange uses the real exchange rate to exchange
           your money — just like the one used by Google.
         </div>
-        <Image
-          src="/change.png"
-          width={335}
-          height={241}
-          alt={""}
-        />
+        <Image src="/change.png" width={335} height={241} alt={""} />
       </div>
-      <Carousel/>
+      <Carousel />
       <div>
-        <ConcatUs/>
+        <ConcatUs />
       </div>
       <div></div>
     </main>
