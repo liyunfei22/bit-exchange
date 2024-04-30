@@ -20,6 +20,9 @@ const config: Config = {
       },
       spacing: {
         18: '4.5rem',
+      },
+      backgroundImage: {
+        'concat-us': "url('/concat.png')",
       }
     },
   },
