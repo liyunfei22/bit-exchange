@@ -12,13 +12,22 @@ const config: Config = {
         black: {
           100: '#3C432F',
           DEFAULT: '#000000'
-        }
+        },
+        brown: '#F0EAE0',
+        green: '#D1E2BE',
+        yellow: '#FAFF7B',
+        'green-text': '#0C9400'
       },
       spacing: {
         18: '4.5rem',
+      },
+      backgroundImage: {
+        'concat-us': "url('/concat.png')",
       }
     },
   },
-  plugins: [],
+  plugins: [
+    // require('@tailwindcss/forms')
+  ],
 };
 export default config;
