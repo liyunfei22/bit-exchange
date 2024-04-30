@@ -51,7 +51,7 @@ export default function BitExchange() {
                   htmlFor="flag"
                   className="absolute inset-y-0 right-0 flex items-center pr-3 rounded-r-lg"
                 >
-                  <span>{theChange ? theChange.icon : changeList[0].icon}</span>
+                  <span className="scale-50">{theChange ? theChange.icon : changeList[0].icon}</span>
                   <select
                     className="select-contry ml-2"
                     name=""
