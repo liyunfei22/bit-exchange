@@ -32,7 +32,7 @@ export default function BitExchange() {
   };
 
   return (
-    <div className="py-4 lg:py-[120px]">
+    <div className="py-4 lg:py-[120px] lg:px-16">
       <div className="font-bold text-xl text-center px-12 mb-4 lg:mb-8 lg:w-[880px] lg:text-6xl lg:font-extrabold lg:mx-auto">
         Maximize Money Exchange, Best Rate in Bali!
       </div>
@@ -49,7 +49,7 @@ export default function BitExchange() {
                 />
                 <label
                   htmlFor="flag"
-                  className="absolute inset-y-0 right-0 flex items-center pr-3"
+                  className="absolute inset-y-0 right-0 flex items-center pr-3 rounded-r-lg"
                 >
                   <span>{theChange ? theChange.icon : changeList[0].icon}</span>
                   <select
@@ -98,7 +98,7 @@ export default function BitExchange() {
               </div>
             </div>
           </div>
-
+          <div className="lg:flex lg:justify-between">
           <div className="mt-4">
             <div className="text-xl text-center">
               <span>
@@ -117,6 +117,7 @@ export default function BitExchange() {
             <button className="rounded-full bg-yellow text-black-100 text-blob text-base py-2 w-48">
               Browse All Currencies
             </button>
+          </div>
           </div>
         </div>
       </div>

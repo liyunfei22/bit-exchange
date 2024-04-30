@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
-import LogInIcon from "@/components/icons/Logo";
-import LogInIconLarge from "@/components/icons/Logo-large";
-import MenuIcon from "@/components/icons/Menu";
 import LogInIcon2 from "@/components/icons/Logo2";
 import Facebook from "@/components/icons/Facebook";
 import Instagram from "@/components/icons/Instagram";
 import Linkedin from "@/components/icons/Linkedin";
 import Youtobe from "@/components/icons/Youtobe";
-import Link from 'next/link'
 import Header from "@/components/Header";
+import PhoneIcon from "@/components/icons/phone";
+import PhoneIconL from "@/components/icons/phone-l";
 
 const inter = Lato({
   subsets: ["latin"],
@@ -33,7 +31,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header/>
         <main>{children}</main>
-        <footer className="flex flex-col items-center py-6 lg:py-[60px]">
+        <footer className="flex flex-col items-center w-screen py-6 lg:py-[60px]">
           <div className="pb-5">
             <LogInIcon2/>
           </div>
@@ -51,6 +49,10 @@ export default function RootLayout({
           </div>
           </div>
         </footer>
+        <div className="fixed bottom-48 lg:right-6 right-4">
+          <div className="lg:hidden"><PhoneIcon/></div>
+          <div className="hidden lg:block"><PhoneIconL/></div>
+        </div>
       </body>
     </html>
   );
