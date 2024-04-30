@@ -1,7 +1,7 @@
 import BitExchange from "@/components/BitExchange";
 import Carousel from "@/components/Carousel";
 import ConcatUs from "@/components/ConcatUs";
-import ConvertionRate from "@/components/ConvertionRate";
+// import ConvertionRate from "@/components/ConvertionRate";
 import WhyBitExchange from "@/components/WhyBitExchange";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <BitExchange />
       <WhyBitExchange/>
-      <ConvertionRate/>
+      {/* <ConvertionRate/> */}
       <Carousel />
       <ConcatUs />
     </main>
