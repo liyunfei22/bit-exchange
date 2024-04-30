@@ -54,7 +54,7 @@ export default function Header() {
             <Link className="block my-2" href="/about">
               About Us
             </Link>
-            <div className="block my-2">Contact Us</div>
+            <Link href="/#concat_us" className="block my-2">Contact Us</Link>
           </div>
         )}
         <div className="hidden lg:flex text-2xl color-black ">
@@ -64,7 +64,7 @@ export default function Header() {
           <Link className="mr-8" href="/about">
             About Us
           </Link>
-          <div className="mr-8">Contact Us</div>
+          <Link href="/#concat_us" className="mr-8">Contact Us</Link>
         </div>
       </div>
     </nav>

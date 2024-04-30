@@ -9,7 +9,7 @@ const plus_Jakarta_Sans = Plus_Jakarta_Sans({
 
 export default function ConcatUs() {
   return (
-    <div className="px-4 py-6 lg:bg-concat-us lg:bg-no-repeat	lg:bg-right	">
+    <div id="concat_us" className="px-4 py-6 lg:bg-concat-us lg:bg-no-repeat	lg:bg-right	">
       <div className="lg:w-[566px] lg:h-[580px]">
         <div className="font-bold text-xl pb-3 text-center lg:text-left lg:text-6xl lg:px-8 lg:pb-6">
           Contact Us
