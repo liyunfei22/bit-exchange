@@ -1,26 +1,18 @@
 "use client";
 
 import { Plus_Jakarta_Sans } from "next/font/google";
-<<<<<<< HEAD
 import exchangeRateList from "../config/exchangeRateList";
 import { useState } from "react";
 
-=======
-import exchangeRateList from '@/config/exchangeRateList';
->>>>>>> 274f1d10cdcb36139e32d02601b3158edb41d889
 const plus_Jakarta_Sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
 });
 
 export default function ConvertionRate() {
-<<<<<<< HEAD
   // console.log(exchangeRateList)
   const [List] = useState(exchangeRateList);
 
-=======
-  const list = exchangeRateList
->>>>>>> 274f1d10cdcb36139e32d02601b3158edb41d889
   return (
     <div className="px-5 py-6 lg:bg-brown lg:py-28">
       <div className="font-bold text-xl pb-2 text-center lg:text-6xl lg:pb-6">
