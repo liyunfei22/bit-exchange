@@ -27,6 +27,12 @@ export default function ConcatUs() {
         message,
       }),
     });
+
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
+    alert("Message sent successfully");
   }
 
   return (
