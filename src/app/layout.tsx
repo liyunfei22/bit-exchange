@@ -42,7 +42,7 @@ export default function RootLayout({
               {/* <div className="mr-6">
                 <Facebook></Facebook>
               </div> */}
-              <a  href="https://www.instagram.com/bitexchangebali/?igsh=bjkwcTl4MTIzenZ6" className="mr-6">
+              <a  href="https://www.instagram.com/bitexchangebali/?igsh=bjkwcTl4MTIzenZ6" className="mr-6 lg:mr-20">
                 <Instagram></Instagram>
               </a>
               {/* <div className="mr-6">
