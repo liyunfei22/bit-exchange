@@ -14,25 +14,47 @@ export default function ConcatUs() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSendLark = () => {
-    fetch("/api/send-lark", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        message,
-      }),
-    });
+  const handleSendLark = async () => {
+    if (!firstName || !lastName || !email || !message) {
+      alert("Please fill in all fields");
+      return;
+    }
 
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setMessage("");
-    alert("Message sent successfully");
+    // const res = await fetch("/api/send-lark", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     firstName,
+    //     lastName,
+    //     email,
+    //     message,
+    //   }),
+    // });
+
+    try {
+      const res: any = await fetch("https://bitexchange.co.id/api-exchange/sendLark", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `first_name=${firstName}&last_name=${lastName}&email=${email}&message=${message}`
+      });
+
+      if (res.code === 0) {
+        alert("Message sent successfully");
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        alert("Failed to send message");
+      }
+    } catch (error) {
+      console.log('error', error);
+      alert("Failed to send message");
+    }
   }
 
   return (
