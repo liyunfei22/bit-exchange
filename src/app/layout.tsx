@@ -39,23 +39,23 @@ export default function RootLayout({
               © 2024 BitExchange. All Rights Reserved
             </div>
             <div className="flex items-center pb-5 justify-center">
-              <div className="mr-6">
+              {/* <div className="mr-6">
                 <Facebook></Facebook>
-              </div>
+              </div> */}
               <a  href="https://www.instagram.com/bitexchangebali/?igsh=bjkwcTl4MTIzenZ6" className="mr-6">
                 <Instagram></Instagram>
               </a>
-              <div className="mr-6">
+              {/* <div className="mr-6">
                 <Linkedin></Linkedin>
-              </div>
-              <div className="">
+              </div> */}
+              {/* <div className="">
                 <Youtobe></Youtobe>
-              </div>
+              </div> */}
             </div>
             <div className="flex flex-col items-center lg:flex-row">
-              <div className="font-bold	text-base	pb-5 lg:mr-12">
+              {/* <div className="font-bold	text-base	pb-5 lg:mr-12">
                 Privacy Policy
-              </div>
+              </div> */}
               <div className="font-bold	text-base pb-5">Terms of Services</div>
             </div>
           </div>

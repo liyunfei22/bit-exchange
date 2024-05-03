@@ -4,6 +4,7 @@ import GBPIcon from "./flag/GBP";
 import IDRIcon from "./flag/IDR";
 import ExchangeIcon from "./icons/Exchange";
 import exchangeRateList from "../config/exchangeRateList";
+import formatNumber from "../utils/formatNumber";
 
 export default function BitExchange() {
   const [changeList] = useState(exchangeRateList);
@@ -13,12 +14,14 @@ export default function BitExchange() {
 
   const handleAmount1Change = (e: any) => {
     const value = +e.target.value;
+    if (typeof value !== "number" || isNaN(value)) return;
     setAmount1(value);
     setAmount2(+(value * theChange.rate).toFixed(2));
   };
 
   const handleAmount2Change = (e: any) => {
     const value = +e.target.value;
+    if (typeof value !== "number" || isNaN(value)) return;
     setAmount2(value);
     setAmount1(+(value / theChange.rate).toFixed(2));
   };
@@ -51,7 +54,7 @@ export default function BitExchange() {
                   htmlFor="flag"
                   className="absolute inset-y-0 right-0 flex items-center pr-3 rounded-r-lg"
                 >
-                  <span>{theChange ? theChange.icon : changeList[0].icon}</span>
+                  <span className="scale-50">{theChange ? theChange.icon : changeList[0].icon}</span>
                   <select
                     className="select-contry ml-2"
                     name=""
@@ -102,14 +105,14 @@ export default function BitExchange() {
           <div className="mt-4">
             <div className="text-xl text-center">
               <span>
-                {amount1} {theChange.value}
+                {formatNumber(amount1)} {theChange.value}
               </span>
               <span className="px-1">=</span>
-              <span className="text-green-text">{amount2}</span>
-              <span>IDR</span>
+              <span className="text-green-text">{formatNumber(amount2)}</span>
+              <span> IDR</span>
             </div>
             <div className="text-center font-light">
-              Mid-market exchange rate at 10:38
+              Mid-market exchange rate at {formatNumber(theChange.rate)} : 1
             </div>
           </div>
 

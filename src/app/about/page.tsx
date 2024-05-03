@@ -37,10 +37,7 @@ export default function About() {
           >
             Our extensive range of services includes the exchange of over 13
             currencies from around the globe, ensuring that our customers can
-            easily access the funds they need wherever they are. In addition, we
-            offer seamless support for digital assets, providing our clients
-            with the flexibility and convenience of trading their cryptocurrency
-            holdings alongside traditional currencies.{" "}
+            easily access the funds they need wherever they are. {" "}
           </p>
           <p
             className={`${plus_Jakarta_Sans.className} text-sm indent-4 font-normal	pb-4 text-center lg:text-left lg:text-xl`}
