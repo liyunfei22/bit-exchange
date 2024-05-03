@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: '/api-exchange/:path*',
+        destination: 'https://bitexchange.co.id/api-exchange/:path*', // 替换为您的外部接口域名
+      },
+    ];
+  },
   webpack(config) {
     config.module.rules.push(
       {
