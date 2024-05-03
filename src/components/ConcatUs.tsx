@@ -9,10 +9,10 @@ const plus_Jakarta_Sans = Plus_Jakarta_Sans({
 });
 
 export default function ConcatUs() {
-  const [firstName, setFirstName] = useState("zhang");
-  const [lastName, setLastName] = useState("san");
-  const [email, setEmail] = useState("232@qq.com");
-  const [message, setMessage] = useState("hello world");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSendLark = () => {
     fetch("/api/send-lark", {
