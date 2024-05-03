@@ -37,10 +37,14 @@ export default function Header() {
   return (
     <nav className="w-full h-18 border-b lg:h-[120px] border-black	 flex justify-between items-center px-4">
       <div className="lg:hidden">
-        <LogInIcon />
+        <Link href="/">
+          <LogInIcon />
+        </Link>
       </div>
       <div className="hidden lg:block lg:ml-20">
-        <LogInIconLarge />
+        <Link href="/">
+          <LogInIconLarge />
+        </Link>
       </div>
       <div>
         <div className="lg:hidden" onClick={toggleMenu}>

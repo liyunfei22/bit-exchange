@@ -3,6 +3,7 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import exchangeRateList from "../config/exchangeRateList";
 import { useState } from "react";
+import formatNumber from "@/utils/formatNumber";
 
 const plus_Jakarta_Sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -48,7 +49,7 @@ export default function ConvertionRate() {
                       </span>
                     </td>
                     <td className=" border-r border-black">
-                      {item.rate}
+                      {formatNumber(item.rate)}
                     </td>
                     <td className=" border-black">Store discussion</td>
                   </tr>
@@ -63,7 +64,7 @@ export default function ConvertionRate() {
                       </span>
                     </td>
                     <td className="border-b border-r border-black">
-                      {item.rate}
+                      {formatNumber(item.rate)}
                     </td>
                     <td className="border-b border-black">Store discussion</td>
                   </tr>

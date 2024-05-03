@@ -112,7 +112,7 @@ export default function BitExchange() {
               <span> IDR</span>
             </div>
             <div className="text-center font-light">
-              Mid-market exchange rate at {formatNumber(theChange.rate)} : 1
+              Mid-market exchange rate at  1 : {formatNumber(theChange.rate)}
             </div>
           </div>
 
